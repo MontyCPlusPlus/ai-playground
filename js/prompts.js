@@ -15,8 +15,8 @@ window.PROMPT_CATEGORIES = [
   { id: 'writing', label: '문자·글쓰기', icon: '💌' },
   { id: 'travel', label: '여행', icon: '🧳' },
   { id: 'language', label: '외국어', icon: '🔠' },
-  { id: 'news', label: '뉴스', icon: '📰' },
   { id: 'education', label: '학습·공부', icon: '🎓' },
+  { id: 'news', label: '뉴스', icon: '📰' },
   { id: 'shopping', label: '쇼핑', icon: '🛒' },
   { id: 'img_gen', label: '그림 만들기', icon: '🎨' },
   { id: 'play', label: '게임·놀이', icon: '🎮' }
@@ -55,12 +55,30 @@ window.PROMPT_CARDS = [
   },
   {
     id: 'moody_songs', category: 'music', icon: '📻', title: '상황에 맞는 노래 추천',
-    description: 'AI에게 상황에 맞는 음악을 추천받아요',
+    description: 'AI에게 상황에 맞는 음악을 추천받아요.',
     template: '{situation} 듣기 좋은 음악 10곡을 추천해줘.',
     fields: [
       { key: 'situation', label: '어떤 상황인가요?', options: ['비 오는 날', '아침에', '늦은 밤에', '운동할 때', '운전할 때'] }
     ],
     caution: 'AI는 가수·노래 제목을 틀릴 수 있어요. 음악 서비스 등에서 다시 확인해요.'
+  },
+  {
+    id: 'books_recommend', category: 'culture', icon: '📚', title: '읽을 소설 추천받기',
+    description: 'AI에게 흥미로운 소설책을 추천받아요.',
+    template: '{genre} 장르의 소설 5권을 추천해줘. 작가와 출판일, 스포일러를 포함하지 않는 간단한 소개 등의 여러 정보를 포함해줘.',
+    fields: [
+      { key: 'genre', label: '어떤 장르의 책을 찾나요?', options: ['판타지', '추리', '스릴러', '범죄', 'SF', '고전', '무협'] }
+    ],
+    caution: 'AI는 작가·내용 등을 틀릴 수 있어요. 구매하기 전에 다시 확인해요.'
+  },
+  {
+    id: 'movie_recommend', category: 'culture', icon: '🍿', title: '재밌는 영화 추천받기',
+    description: 'AI에게 재밌는 영화를 추천받아요.',
+    template: '{genre} 장르의 영화 5편을 추천해줘. 감독과 출연진, 시놉시스 등의 정보를 포함하고, Netflix, Disney+, YouTube 등 그 영화를 감상할 수 있는 OTT 서비스를 같이 알려줘.',
+    fields: [
+      { key: 'genre', label: '어떤 장르의 영화를 찾나요?', options: ['로맨스', '드라마', '액션', '판타지', 'SF', '스릴러', '공포', '코미디', '추리', '애니메이션'] }
+    ],
+    caution: 'AI는 감독, 배우, 감상 방법 등을 틀릴 수 있어요.'
   },
   {
     id: 'recipe', category: 'cook', icon: '🍲', title: '재료 하나로 쉬운 요리 찾기',
@@ -195,7 +213,7 @@ window.PROMPT_CARDS = [
       { key: 'term', label: '얼마나 여행하나요?', options: ['1박 2일', '2박 3일', '3박 4일', '4박 5일', '일주일'] },
       { key: 'city', label: '어디를 여행하나요?', options: ['도쿄', '오사카', '상하이', '베이징', '로스엔젤레스', '뉴욕', '런던', '하노이', '파리', '베를린'] }
     ],
-    caution: '운영시간, 요금 등의 정보는 정확하지 않을 수 있어요. 방문 전에 한 번 다시 확인해요.'
+    caution: 'AI는 정확하지 않은 정보를 알려줄 수 있어요. 실제로 여행을 떠나기 전에 직접 다시 확인해요.'
   },
   {
     id: 'travel_language', category: 'language', icon: '🌎', title: '여행지 필수 회화 검색',
@@ -204,6 +222,15 @@ window.PROMPT_CARDS = [
     fields: [
       { key: 'country', label: '어디로 여행을 가시나요?', options: ['미국', '일본', '중국', '베트남', '태국', '프랑스'] },
       { key: 'situation', label: '어떤 상황인가요?', options: ['식당에서 주문할 때', '길을 잃었을 때', '물건을 살 때', '응급 상황일 때'] }
+    ]
+  },
+  {
+    id: 'foreign_language_learning', category: 'language', icon: '💬', title: '외국어 단어 공부하기',
+    description: 'AI와 함께 간단한 외국어 단어를 공부해봐요.',
+    template: '자주 쓰이는 {level} {language} 단어 5개를 소개해줘. 단어의 뜻과 예문 2-3가지를 포함하고, 단어와 예문 모두 한국어 발음을 함께 알려줘.',
+    fields: [
+      { key: 'level', label: '어느 정도가 좋나요?', options: ['초급 수준의', '중급 수준의', '고급 수준의']},
+      { key: 'language', label: '어떤 언어를 공부할건가요?', options: ['영어', '일본어', '중국어', '스페인어', '프랑스어', '독일어'] }
     ]
   },
   {
@@ -216,7 +243,7 @@ window.PROMPT_CARDS = [
     ]
   },
   {
-    id: 'easy_concept', category: 'education', icon: '📚', title: '어려운 개념 쉽게 이해하기',
+    id: 'easy_concept', category: 'education', icon: '💭', title: '어려운 개념 쉽게 이해하기',
     description: '어려운 개념들을 AI가 쉽게 설명해요.',
     template: '{keyword}에 대해 배경 지식이 전혀 없는 사람도 쉽게 이해할 수 있게 설명해줘. 필요하다면 사진을 인용하거나 그래프, 표와 같은 시각화 도구들을 적극 활용해줘.',
     fields: [
@@ -242,6 +269,24 @@ window.PROMPT_CARDS = [
     ]
   },
   {
+    id: 'news_korea', category: 'news', icon: '🗞️', title: '한국의 중요 뉴스 확인하기',
+    description: 'AI가 중요한 뉴스들을 정리해줘요.',
+    template: '오늘 한국에서 있었던 {cartegory} 분야의 뉴스를 찾아서 소개해줘.',
+    fields: [
+      { key: 'cartegory', label: '어떤 뉴스가 궁금한가요?', options: ['정치', '경제', '사회', '생활/문화', '스포츠', '연예'] }
+    ],
+    caution: 'AI는 정확하지 않은 정보를 제공할 수 있어요. 무조건 믿지 말고 직접 뉴스를 확인하는 것이 정확해요.'
+  },
+  {
+    id: 'news_world', category: 'news', icon: '🌐', title: '세계 각국의 뉴스 확인하기',
+    description: 'AI가 외국의 소식들을 정리해줘요.',
+    template: '오늘 {country}에서 있었던 중요한 뉴스 5가지를 찾아서 소개해줘.',
+    fields: [
+      { key: 'country', label: '어떤 나라가 궁금한가요?', options: ['미국', '중국', '일본', '러시아', '유럽', '남미'] }
+    ],
+    caution: 'AI는 정확하지 않은 정보를 제공할 수 있어요. 무조건 믿지 말고 직접 뉴스를 확인하는 것이 정확해요.'
+  },
+  {
     id: 'gift_recommend', category: 'shopping', icon: '🎁', title: '센스 있는 선물 추천받기',
     description: '나이와 예산에 딱 맞는 선물을 AI가 골라줘요.',
     template: '{age} {gender}에게 {budget} 선물하기 좋은 센스있는 아이템 3가지를 추천해주고, 그 이유도 함께 말해줘.',
@@ -252,12 +297,32 @@ window.PROMPT_CARDS = [
     ]
   },
   {
+    id: 'product_recommend', category: 'shopping', icon: '📺', title: '좋은 제품 추천받기',
+    description: 'AI가 좋은 제품을 추천해줘요.',
+    template: '{product}를 구매하려고 해. {prefer} 제품 3가지를 찾아서 가격대, 특징, 실제 사용 후기 등을 소개하고 그 셋을 서로 비교해줘.',
+    fields: [
+      { key: 'product', label: '어떤 상품을 구매하나요?', options: ['TV', '냉장고', '스마트폰', '노트북', '카메라'] },
+      { key: 'prefer', label: '어떤 제품을 선호하나요?', options: ['가성비가 좋은', '최근에 출시된', '성능이 가장 좋은'] }
+    ],
+    caution: 'AI는 가격, 판매처 등의 정보를 잘못 알려줄 수도 있어요. 실제로 구매하기 전 다시 확인해요.'
+  },
+  {
     id: 'picture', category: 'img_gen', icon: '🎨', title: '예쁜 풍경 그림 만들기',
     description: '그리고 싶은 풍경과 그림 느낌을 골라보세요.',
     template: '{scene} 풍경을 {style} 느낌으로 예쁘게 그려줘. 그림에는 글자를 넣지 말아줘.',
     fields: [
       { key: 'scene', label: '어떤 풍경을 그릴까요?', options: ['가을 숲', '꽃이 핀 정원', '노을 지는 바다', '눈 덮인 시골 마을'] },
-      { key: 'style', label: '어떤 느낌이 좋으세요?', options: ['수채화', '유화', '사진 같은', '동화책 삽화'] }
+      { key: 'style', label: '어떤 느낌이 좋으세요?', options: ['수채화', '유화', '점묘화', '사진 같은', '동화책 삽화'] }
+    ],
+    caution: 'AI 그림은 실제 사진이 아니에요. 다른 사람의 얼굴을 허락 없이 사용하지 않아요.'
+  },
+  {
+    id: 'art', category: 'img_gen', icon: '🖼️', title: '예술적인 그림 만들기',
+    description: 'AI가 예술 작품같은 그림을 만들어 줘요.',
+    template: '{scene}을 주제로 예술 작품같은 그림을 만들어줘. {style}적인 스타일로 그리고, 그림에는 글자를 넣지 말아줘.',
+    fields: [
+      { key: 'scene', label: '어떤 그림을 그릴까요?', options: ['하늘에서 내려다본 거리의 모습', '노을진 여름 바닷가에서 휴가를 즐기는 사람들', '일상적인 카페의 사람들', '꽃 한 송이와 벌새 한 마리', '구름 낀 언덕 위의 성'] },
+      { key: 'style', label: '어떤 느낌으로 그릴까요?', options: ['인상주의', '모더니즘', '신고전주의', '르네상스', '바로크', '낭만주의'] }
     ],
     caution: 'AI 그림은 실제 사진이 아닐 수 있어요. 다른 사람의 얼굴을 허락 없이 사용하지 않아요.'
   },
@@ -277,6 +342,22 @@ window.PROMPT_CARDS = [
       { key: 'theme', label: '어떤 주제로 게임할까요?', options: ['동물', '과일', '직업', '한국 위인', '한국 연예인'] }
     ],
     caution: 'AI가 게임 도중에 자기가 생각한 정답을 까먹거나 말을 바꿀 수도 있어요.'
+  },
+  {
+    id: 'trivia_quiz', category: 'play', icon: '🤔', title: 'AI가 내는 재밌는 상식 퀴즈',
+    description: 'AI가 내는 재밌는 상식 퀴즈를 맞혀보세요!',
+    template: '{theme}에 대한 간단하고 재밌는 상식 퀴즈 5문제를 내줘.',
+    fields: [
+      { key: 'theme', label: '어떤 주제로 문제를 낼까요?', options: ['동물', '식물', '유명인', '역사', '영단어', '수학·과학', '문학', '한국 대중문화'] }
+    ]
+  },
+  {
+    id: 'nonsense_quiz', category: 'play', icon: '🤣', title: 'AI가 내는 재밌는 넌센스 퀴즈',
+    description: 'AI가 내는 재밌는 넌센스 퀴즈를 맞혀보세요!',
+    template: '간단하고 재밌는 넌센스 퀴즈 5문제를 내줘.',
+    fields: [
+    ],
+    caution: 'AI가 억지스러운 문제를 낼 수도 있어요.'
   }
 ];
 
