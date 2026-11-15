@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff9ee">
+  <meta name="description" content="어르신과 함께하는 쉽고 재미있는 AI 질문 연습. 고르고 복사해서 ChatGPT에서 사용해 보세요.">
+  <title>AI랑 놀아봐요! | 쉬운 AI 질문 연습</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/prompts.js"></script>
+  <script defer src="./js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 바로 가기</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./index.html" aria-label="AI랑 놀아봐요, 첫 화면으로">🌼 <span>AI랑 놀아봐요!</span></a>
+      <a href="#safety" class="header-safety">🛡️ 안전하게 사용하기</a>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow">우리 동아리 AI 체험 교실</span>
+        <h1 id="hero-title">어려운 글쓰기 없이,<br><em>누르고 골라서</em> 질문해요!</h1>
+        <p>관심 있는 주제를 고르면 질문이 자동으로 만들어져요.<br class="desktop-only"> 복사한 다음 ChatGPT에 붙여넣기만 하면 돼요.</p>
+        <a class="primary-link" href="#practice">질문 골라보기 <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <div class="bubble bubble-one">🎵 좋아하는 노래는?</div>
+        <div class="bubble bubble-two">🌿 집에서 할 운동은?</div>
+        <div class="bubble bubble-three">🎨 예쁜 그림도!</div>
+      </div>
+    </section>
+
+    <section class="steps-section" aria-labelledby="steps-title">
+      <div class="section-heading">
+        <span class="kicker">처음 오셨나요?</span>
+        <h2 id="steps-title">이렇게 사용해요</h2>
+      </div>
+      <ol class="step-grid">
+        <li><span class="step-number">1</span><div><strong>질문 고르기</strong><span>좋아하는 주제를 선택해요.</span></div></li>
+        <li><span class="step-number">2</span><div><strong>질문 복사하기</strong><span>큰 복사 버튼을 눌러요.</span></div></li>
+        <li><span class="step-number">3</span><div><strong>ChatGPT에 붙여넣기</strong><span>입력칸을 길게 누르고 ‘붙여넣기’를 골라요.</span></div></li>
+      </ol>
+    </section>
+
+    <section class="practice-section" id="practice" aria-labelledby="practice-title">
+      <div class="section-heading">
+        <span class="kicker">직접 해봐요</span>
+        <h2 id="practice-title">오늘은 무엇이 궁금하세요?</h2>
+        <p>아래에서 주제를 골라보세요. 답이 마음에 안 들면 한 번 더 질문해도 돼요!</p>
+      </div>
+      <div id="category-tabs" class="category-tabs" role="group" aria-label="질문 주제 선택"></div>
+      <div class="prompt-list" id="prompt-list" aria-live="off"></div>
+    </section>
+
+    <section class="followup-section" aria-labelledby="followup-title">
+      <div class="section-heading">
+        <span class="kicker">한 번 더 물어봐요</span>
+        <h2 id="followup-title">AI의 대답을 바꾸고 싶다면?</h2>
+        <p>ChatGPT가 대답한 뒤에 아래 문장을 하나 더 보내보세요.</p>
+      </div>
+      <div id="followups" class="followup-grid"></div>
+    </section>
+
+    <section class="safety-section" id="safety" aria-labelledby="safety-title">
+      <div class="safety-title-group">
+        <span class="kicker">꼭 기억해요</span>
+        <h2 id="safety-title">🛡️ AI를 안전하게 사용하는 3가지 약속</h2>
+        <p>AI는 편리하지만, 보여주는 답을 전부 믿어서는 안 돼요.</p>
+      </div>
+      <div class="safety-grid">
+        <article class="safety-card">
+          <div class="safety-icon" aria-hidden="true">🔎</div>
+          <h3>1. 중요한 내용은 다시 확인해요</h3>
+          <p>AI는 틀린 정보도 자신 있게 이야기할 수 있어요. 이것을 <strong>AI 환각(할루시네이션)</strong>이라고 해요. 건강·돈·법률 관련 정보는 공식 자료나 전문가에게 확인하세요.</p>
+        </article>
+        <article class="safety-card">
+          <div class="safety-icon" aria-hidden="true">🎭</div>
+          <h3>2. 사진과 목소리만 믿지 않아요</h3>
+          <p><strong>딥페이크</strong> 기술로 실제 같은 가짜 사진, 영상, 목소리를 만들 수 있어요. 가족이라며 송금을 부탁해도 평소 알고 있던 번호로 직접 다시 확인하세요.</p>
+        </article>
+        <article class="safety-card">
+          <div class="safety-icon" aria-hidden="true">🔐</div>
+          <h3>3. 개인정보를 입력하지 않아요</h3>
+          <p>비밀번호, 주민등록번호, 계좌 비밀번호, 다른 사람의 개인적인 사진이나 정보 등을 함부로 입력하지 마세요.</p>
+        </article>
+      </div>
+      <p class="safety-ending">💡 <strong>기억하세요!</strong> AI는 훌륭한 도우미지만, 마지막 판단은 내가 해요.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>🌼 AI랑 놀아봐요! — 편하게 질문하고, 중요한 것은 꼭 확인해요.</span>
+      <span>AI 체험 수업용 무료 자료</span>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
