@@ -5,6 +5,7 @@
  * 자세한 내용은 js/README.md를 참조.
  */
 
+// 1. 카테고리 목록
 window.PROMPT_CATEGORIES = [
   { id: 'all', label: '전체 보기', icon: '✨' },
   { id: 'music', label: '음악', icon: '🎵' },
@@ -22,6 +23,7 @@ window.PROMPT_CATEGORIES = [
   { id: 'play', label: '게임·놀이', icon: '🎮' }
 ];
 
+// 2. 프롬프트 카드 목록
 window.PROMPT_CARDS = [
   {
     id: 'songs', category: 'music', icon: '🎵', title: '좋아하는 가수의 대표곡 찾기',
@@ -361,6 +363,7 @@ window.PROMPT_CARDS = [
   }
 ];
 
+// 3. 후속 질문 목록
 window.FOLLOWUP_PROMPTS = [
   '더 쉽게 설명해줘.',
   '조금 더 짧게 정리해줘.',
