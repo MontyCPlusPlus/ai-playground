@@ -1,19 +1,19 @@
-# 👴👵 AI Playground (시니어 AI 프롬프트 라이브러리)
+# AI Playground (시니어 AI 프롬프트 라이브러리)
 
 [![Deploy Status](https://github.com/montycplusplus/ai-playground/actions/workflows/pages/pages-build-deployment/badge.svg)](https://montycplusplus.github.io/ai-playground/)
 
-## 📖 프로젝트 개요
+## 프로젝트 개요
 **AI Playground**는 디지털 기기 및 AI 사용에 어려움을 겪는 어르신들이 대형 언어 모델(LLM)과 음성 인터페이스를 쉽고 재미있게 활용할 수 있도록 돕는 **오픈소스 웹 프롬프트 라이브러리**입니다. 
 
 지역 사회복지관 어르신 컴퓨터 교실에서의 실제 보조강사 경험을 바탕으로, 복잡한 타이핑 없이 상황에 맞는 질문 양식을 바로 찾아 쓸 수 있도록 직관적인 UI로 설계되었습니다.
 
-## ✨ 주요 기능
+## 주요 기능
 * **시니어 맞춤형 프롬프트 모음:** 건강 정보 검색, 일상 대화, 취미 생활 등 어르신들의 실생활 관심사에 맞춘 실용적인 AI 질문 템플릿 제공
 * **직관적인 UI/UX:** 시니어의 인지적 특성과 시력을 고려한 큰 텍스트, 명확한 색상 대비, 단순한 네비게이션
 * **무설치 접근성:** 별도의 서버나 회원가입, 설치 과정 없이 웹 브라우저만 있으면 즉시 접속 가능한 정적 웹 페이지 (GitHub Pages)
 * **원클릭 복사 지원:** 클릭 한 번으로 프롬프트를 복사해 즉시 AI 챗봇에 붙여넣을 수 있는 편의 기능
 
-## 🛠 기술 스택
+## 기술 스택
 * **Frontend:** HTML5, CSS3, Vanilla JavaScript
 * **Hosting / Deployment:** GitHub Pages
 
