@@ -2,7 +2,7 @@
  * 새 카테고리·프롬프트를 위해서는 아래 배열에 객체 하나를 추가한다.
  * template의 {key}와 fields[].key를 일치시키면 선택값이 자동 반영된다.
  * 서버나 계정 없이 작동하는 정적 데이터.
- * 자세한 내용은 README.md를 참조.
+ * 자세한 내용은 js/README.md를 참조.
  */
 
 window.PROMPT_CATEGORIES = [
