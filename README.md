@@ -51,9 +51,29 @@ ai-playground/
 웹 개발 환경이 구축되어 있지 않아도 웹 브라우저만 있으면 바로 확인해 볼 수 있는 방법입니다.
 
 1. GitHub 저장소 페이지 우측 상단의 초록색 **[Code]** 버튼을 클릭합니다.
-2. 메뉴에서 **[Download ZIP]**을 선택하여 프로젝트 파일을 다운로드합니다.
+2. 메뉴에서 **[Download ZIP]** 버튼을 클릭하여 압축된 프로젝트 파일을 다운로드합니다.
 3. 다운로드된 ZIP 파일의 압축을 해제합니다.
 4. 압축을 푼 폴더 안의 `index.html` 파일을 더블클릭하거나, 사용 중인 웹 브라우저(Chrome, Edge, Safari 등) 창으로 드래그 앤 드롭하여 엽니다.
+
+### 2.2. Git을 이용하여 로컬 환경에서 실행하기 (WSL / 개발자용)
+터미널(WSL Ubuntu 등) 환경에서 Git을 이용해 프로젝트를 클론하고 로컬 웹 서버를 띄워 실행하는 방법입니다.
+
+1. 터미널 열고 다음 명령어를 입력하여 저장소를 복제합니다.
+   ```bash
+   git clone [https://github.com/montycplusplus/ai-playground.git](https://github.com/montycplusplus/ai-playground.git)
+   ```
+2. 복제된 프로젝트 폴더로 이동합니다.
+   ```bash
+   cd ai-playground
+   ```
+4. 로컬 웹 서버를 실행합니다. (Python 3가 설치되어 있는 경우)
+    ```bash
+   python3 -m http.server 8000
+   ```
+
+   (참고: VS Code를 주로 사용하신다면 프로젝트를 연 상태에서 Live Server 확장 프로그램을 이용하셔도 매우 편리합니다.)
+   
+8. 웹 브라우저를 열고 http://localhost:8000 으로 접속하여 웹사이트가 정상적으로 표시되는지 확인합니다.
 
 ## GitHub Pages 배포
 
