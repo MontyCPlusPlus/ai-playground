@@ -28,21 +28,22 @@
 
 자세한 내용은 저장소 내의 `LICENSE` 파일을 참고해 주세요.
 
-## 파일 구조
+## 1. 디렉토리 구조 (Directory Structure)
 
 ```text
 ai-playground/
-├── index.html
-├── .nojekyll
 ├── css/
-│   └── style.css
-└── js/
-    ├── prompts.js    # 내용 추가·수정: 카테고리/질문/선택지
-    └── app.js        # 질문 카드 화면 및 복사 동작
+│   └── style.css       # 웹페이지 스타일 및 레이아웃
+├── js/
+│   ├── app.js          # 메인 기능 로직 (UI 이벤트 처리, 프롬프트 복사 기능 등)
+│   └── prompts.js      # 카테고리별 프롬프트 데이터 (JSON 형태의 데이터 모음)
+├── .nojekyll           # GitHub Pages 배포 시 Jekyll 빌드 방지용 파일
+├── LICENSE             # MIT 라이선스 정보
+├── README.md           # 프로젝트 설명 파일
+└── index.html          # 메인 진입점 (기본 웹 페이지)
 ```
 
 ## 실행
-
 
 ## GitHub Pages 배포
 
