@@ -45,7 +45,7 @@
 
 1. 터미널 열고 다음 명령어를 입력하여 저장소를 복제합니다.
    ```bash
-   git clone [https://github.com/montycplusplus/ai-playground.git](https://github.com/montycplusplus/ai-playground.git)
+   git clone "https://github.com/montycplusplus/ai-playground.git"
    ```
 2. 복제된 프로젝트 폴더로 이동합니다.
    ```bash
