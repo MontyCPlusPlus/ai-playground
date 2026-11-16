@@ -78,7 +78,7 @@
 Git이 설치되어 있고 터미널 사용이 익숙하시다면, 웹에서 포크를 완료한 후 아래 명령어를 통해 로컬 환경으로 가져와 작업하실 수 있습니다.
 
 ```bash
-git clone [https://github.com/](https://github.com/)[본인계정명]/ai-playground.git
+git clone "https://github.com/[본인계정명]/ai-playground.git"
 cd ai-playground
 ```
 
