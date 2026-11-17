@@ -1,4 +1,4 @@
-# AI Playground (AI 컴패니언 사용법 교육용 인터렉티브 웹사이트)
+# AI Playground (교육 보조용 인터랙티브 AI 프롬프트 라이브러리)
 
 [![Deploy Status](https://github.com/montycplusplus/ai-playground/actions/workflows/pages/pages-build-deployment/badge.svg)](https://montycplusplus.github.io/ai-playground/)
 
@@ -11,10 +11,10 @@
 
 • 면책 조항: 소프트웨어는 어떠한 명시적/묵시적 보증 없이 있는 그대로 제공되며, 제작자나 저작권자는 소프트웨어와 관련하여 발생하는 어떠한 청구, 손해, 기타 책임에 대해서도 책임을 지지 않습니다.
 
-자세한 내용은 저장소 내의 `LICENSE` 파일을 참고하여 주십시오.
+자세한 내용 및 라이선스 원문은 저장소 내의 `LICENSE` 파일을 참고하여 주십시오.
 
 ## 1. 프로젝트 개요
-**AI Playground**는 디지털 기기 및 AI 사용에 어려움을 겪는 어르신들이 대형 언어 모델(LLM)과 음성 인터페이스를 쉽고 재미있게 활용할 수 있도록 돕는 **오픈소스 웹 프롬프트 라이브러리**입니다. 
+**AI Playground**는 디지털 기기 및 AI 사용에 어려움을 겪는 어르신들이 대형 언어 모델(LLM)을 쉽고 재미있게 활용할 수 있도록 돕는 **오픈소스 웹 프롬프트 라이브러리**입니다. 
 
 지역 사회복지관 어르신 컴퓨터 교실에서의 실제 보조강사 경험을 바탕으로, 복잡한 타이핑 없이 상황에 맞는 질문 양식을 바로 찾아 쓸 수 있도록 직관적인 UI로 설계되었습니다.
 
@@ -105,7 +105,7 @@ ai-playground/
 │   ├── app.js          # 메인 기능 로직 (UI 이벤트 처리, 프롬프트 복사 기능 등)
 │   └── prompts.js      # 카테고리별 프롬프트 데이터 (JSON 형태의 데이터 모음)
 ├── .nojekyll           # GitHub Pages 배포 시 Jekyll 빌드 방지용 파일
-├── LICENSE             # MIT 라이선스 정보
+├── LICENSE             # MIT 라이선스 정보 (변경 및 삭제 금지)
 ├── README.md           # 프로젝트 설명 파일
 └── index.html          # 메인 진입점 (기본 웹 페이지)
 ```
