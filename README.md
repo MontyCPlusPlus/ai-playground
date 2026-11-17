@@ -39,12 +39,12 @@
 
    <img width="462" height="62" alt="Screenshot-code" src="https://github.com/user-attachments/assets/e1095f32-0c56-44af-a60e-adbc5f4844a0" />
    
-3. 메뉴에서 **[Download ZIP]** 버튼을 클릭하여 압축된 프로젝트 파일을 다운로드합니다.
+2. 메뉴에서 **[Download ZIP]** 버튼을 클릭하여 압축된 프로젝트 파일을 다운로드합니다.
 
    <img width="462" height="350" alt="Screenshot_downloadzip" src="https://github.com/user-attachments/assets/f889acfb-1894-4f1d-8e60-5bbd022cc2c6" />
 
-5. 다운로드된 ZIP 파일의 압축을 해제합니다.
-6. 압축을 푼 폴더 안의 `index.html` 파일을 더블클릭하거나, 사용 중인 웹 브라우저(Chrome, Edge, Safari 등) 창으로 드래그 앤 드롭하여 엽니다.
+3. 다운로드된 ZIP 파일의 압축을 해제합니다.
+4. 압축을 푼 폴더 안의 `index.html` 파일을 더블클릭하거나, 사용 중인 웹 브라우저(Chrome, Edge, Safari 등) 창으로 드래그 앤 드롭하여 엽니다.
 
 ### 2.2. Git을 이용하여 로컬 환경에서 실행하기 (WSL / 개발자용)
 터미널(WSL Ubuntu 등) 환경에서 Git을 이용해 프로젝트를 클론하고 로컬 웹 서버를 띄워 실행하는 방법입니다.
@@ -86,9 +86,9 @@
 
    <img width="462" height="190" alt="Screenshot-fork-check" src="https://github.com/user-attachments/assets/b3c07fb4-6e73-4257-af48-506d2c4673f2" />
 
-5. 복사된 본인의 저장소에서 교육 대상에 맞게 코드를 자유롭게 수정합니다.
+4. 복사된 본인의 저장소에서 교육 대상에 맞게 코드를 자유롭게 수정합니다.
    * **프롬프트 수정 방법:** 프롬프트를 변경하는 상세한 방법은 `js` 폴더 내에 있는 `README.md` 파일을 참고하여 주십시오.
-6. **⚠️ 주의사항:** 저장소를 포크하여 자체적으로 배포 및 사용하시더라도, 원본 프로젝트의 `LICENSE` 파일은 삭제하거나 변경해서는 안 됩니다.
+5. **⚠️ 주의사항:** 저장소를 포크하여 자체적으로 배포 및 사용하시더라도, 원본 프로젝트의 `LICENSE` 파일은 삭제하거나 변경해서는 안 됩니다.
 
 ### 3.1.1. 터미널(Git)을 이용해 포크한 저장소 로컬로 가져오기 (Git 사용자용)
 
@@ -113,11 +113,11 @@ cd ai-playground
 
    <img width="462" height="590" alt="Screenshot-pages" src="https://github.com/user-attachments/assets/3b8ca772-e0fe-46b2-b589-6bb9856b24df" />
 
-4. 'Build and deployment' 섹션의 'Source'를 **Deploy from a branch**로 설정하고, 'Branch' 항목에서 **main** 브랜치를 선택하고 폴더는 **/(root)** 로 지정한 뒤 **[Save]** 버튼을 누릅니다.
+3. 'Build and deployment' 섹션의 'Source'를 **Deploy from a branch**로 설정하고, 'Branch' 항목에서 **main** 브랜치를 선택하고 폴더는 **/(root)** 로 지정한 뒤 **[Save]** 버튼을 누릅니다.
 
    <img width="462" height="250" alt="Screenshot-pagessetting" src="https://github.com/user-attachments/assets/3c3349db-6dee-4648-858b-1d4952a827c1" />
 
-5. 1~2분 정도 기다리면 설정 페이지 상단에 웹사이트 주소가 나타나며, 해당 링크로 즉시 접속할 수 있습니다. 기본적으로 제공되는 주소는 `https://[본인계정명].github.io/ai-playground/`이며, 해당 페이지에서 주소를 일부 수정할 수 있습니다.
+4. 1~2분 정도 기다리면 설정 페이지 상단에 웹사이트 주소가 나타나며, 해당 링크로 즉시 접속할 수 있습니다. 기본적으로 제공되는 주소는 `https://[본인계정명].github.io/ai-playground/`이며, 해당 페이지에서 주소를 일부 수정할 수 있습니다.
 
    <img width="462" height="330" alt="Screenshot-pagescomplete" src="https://github.com/user-attachments/assets/8920a1e2-27b0-4645-9860-d21d42a1655c" />
 
