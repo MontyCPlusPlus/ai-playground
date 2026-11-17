@@ -106,10 +106,21 @@ cd ai-playground
 별도의 서버 비용 없이 GitHub Pages 기능을 이용해 무료로 웹사이트를 배포할 수 있습니다.
 
 1. 포크한 본인 계정의 저장소에서 상단의 **[Settings]** 탭을 클릭합니다.
+
+   <img width="462" height="190" alt="Screenshot-settingsbutton" src="https://github.com/user-attachments/assets/c9423abc-2c4a-4b4f-939b-be38f6c977f3" />
+
 2. 좌측 사이드바 메뉴에서 **[Pages]** 를 선택합니다.
-3. 'Build and deployment' 섹션의 'Source'를 **Deploy from a branch**로 설정합니다.
-4. 'Branch' 항목에서 **main** 브랜치를 선택하고 폴더는 **/(root)** 로 지정한 뒤 **[Save]** 버튼을 누릅니다.
+
+   <img width="462" height="590" alt="Screenshot-pages" src="https://github.com/user-attachments/assets/3b8ca772-e0fe-46b2-b589-6bb9856b24df" />
+
+4. 'Build and deployment' 섹션의 'Source'를 **Deploy from a branch**로 설정하고, 'Branch' 항목에서 **main** 브랜치를 선택하고 폴더는 **/(root)** 로 지정한 뒤 **[Save]** 버튼을 누릅니다.
+
+   <img width="462" height="250" alt="Screenshot-pagessetting" src="https://github.com/user-attachments/assets/3c3349db-6dee-4648-858b-1d4952a827c1" />
+
 5. 1~2분 정도 기다리면 설정 페이지 상단에 웹사이트 주소가 나타나며, 해당 링크로 즉시 접속할 수 있습니다. 기본적으로 제공되는 주소는 `https://[본인계정명].github.io/ai-playground/`이며, 해당 페이지에서 주소를 일부 수정할 수 있습니다.
+
+   <img width="462" height="330" alt="Screenshot-pagescomplete" src="https://github.com/user-attachments/assets/8920a1e2-27b0-4645-9860-d21d42a1655c" />
+
 
 ## 4. 디렉토리 구조 (Directory Structure)
 
