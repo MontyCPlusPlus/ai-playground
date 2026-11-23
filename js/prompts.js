@@ -262,10 +262,10 @@ window.PROMPT_CARDS = [
   {
     id: 'holiday_card', category: 'writing', icon: '📭', title: '기념일 카드 문구 만들기',
     description: '특별한 기념일 카드에 들어갈 인삿말을 만들어봐요.',
-    template: '{recipient}에게 보낼 {purpose} 카드에 들어갈 특별한 글을 써줘.',
+    template: '{recipient}에게 보낼 {occasion} 카드에 들어갈 특별한 글을 써줘.',
     fields: [
       { key: 'recipient', label: '누구에게 보내나요?', options: ['친구', '가족', '동아리 회원', '이웃'] },
-      { key: 'purpose', label: '어떤 기념일인가요?', options: ['설날', '추석', '신년', '크리스마스', '생일'] }
+      { key: 'occasion', label: '어떤 기념일인가요?', options: ['설날', '추석', '신년', '크리스마스', '생일'] }
     ]
   },
   {
@@ -352,6 +352,14 @@ window.PROMPT_CARDS = [
     ]
   },
   {
+    id: 'english_conversation', category: 'language', icon: '🔡', title: '영어 회화 연습하기',
+    description: 'AI와 영어 회화 연습을 해봐요',
+    template: '나와 영어 회화 연습을 하자. 주제는 {topic}으로 하고, 초급 수준에 맞춰 영어로 질문해줘. 내가 영어로 답하면 틀린 문법이나 어색한 표현을 한국어로 친절하게 설명해줘. 한 번에 질문은 하나씩만 해줘.',
+    fields: [
+      { key: 'topic', label: '어느 주제가 좋나요?', options: ['취미', '해외 여행 경험', '가족', '좋아하는 음식']},
+    ]
+  },
+  {
     id: 'easy_term', category: 'education', icon: '💹', title: '어려운 시사 용어 쉽게 이해하기',
     description: '요즘 뉴스에 나오는 어려운 말을 AI가 쉽게 설명해요.',
     template: '요즘 뉴스에 자주 나오는 {keyword}에 대해 쉽게 이해할 수 있게 {format} 설명해줘.',
@@ -387,6 +395,14 @@ window.PROMPT_CARDS = [
     ]
   },
   {
+    id: 'daily_knowledge', category: 'education', icon: '📖', title: '하루 5분 상식 배우기',
+    description: 'AI에게 유익한 상식을 배워봐요.',
+    template: '오늘 알아두면 유익한 {topic} 관련 상식 5가지를 알려줘. 일상생활에서 활용할 수 있거나 흥미로운 내용을 중심으로 설명하고, 각각 이해하기 쉬운 예시도 들어줘.',
+    fields: [
+      { key: 'topic', label: '어떤 분야가 궁금한가요?', options: ['과학', '수학', '한국사', '세계사', '법', '정치', '경제', '우주'] }
+    ]
+  },
+  {
     id: 'news_korea', category: 'news', icon: '🗞️', title: '한국의 중요 뉴스 확인하기',
     description: 'AI가 중요한 뉴스들을 정리해줘요.',
     template: '오늘 한국의 {category} 분야에서 중요한 뉴스를 찾아 5가지 소개해줘. 반드시 최신 뉴스 기사를 검색하고, 각 뉴스의 발생 날짜와 핵심 내용을 쉽게 요약해줘. 뉴스가 실제로 발생한 날짜와 기사가 작성된 날짜를 구분해줘. 각 뉴스의 출처와 원문 링크를 제공하고, 아직 확인되지 않은 내용이나 논란이 있는 부분은 따로 표시해줘.',
@@ -407,12 +423,13 @@ window.PROMPT_CARDS = [
   {
     id: 'gift_recommend', category: 'shopping', icon: '🎁', title: '센스 있는 선물 추천받기',
     description: '나이와 예산에 딱 맞는 선물을 AI가 골라줘요.',
-    template: '{age} {gender}에게 {budget} 선물하기 좋은 센스있는 아이템 3가지를 추천해주고, 그 이유도 함께 말해줘.',
+    template: '{age} {gender}에게 {budget} 정도의 예산 선물하기 좋은 센스있는 아이템 3가지를 추천해주고, 그 이유도 함께 말해줘.',
     fields: [
       { key: 'age', label: '선물 받을 분의 연령대는?', options: ['20대', '30대', '40대', '50대 이상', '10대'] },
       { key: 'gender', label: '성별은 어떻게 되나요?', options: ['여성', '남성'] },
-      { key: 'budget', label: '예산은 얼마인가요?', options: ['3만 원대 예산으로', '5만 원대 예산으로', '10만 원대 예산으로', '예산을 고려하지 않고'] }
-    ]
+      { key: 'budget', label: '예산은 얼마인가요?', options: ['3만 원대', '5만 원대', '10만 원대'] }
+    ],
+    caution: 'AI는 가격, 판매처 등의 정보를 잘못 알려줄 수도 있어요. 실제로 구매하기 전 다시 확인해요.'
   },
   {
     id: 'product_recommend', category: 'shopping', icon: '📺', title: '좋은 제품 추천받기',
@@ -421,6 +438,26 @@ window.PROMPT_CARDS = [
     fields: [
       { key: 'product', label: '어떤 상품을 구매하나요?', options: ['TV', '냉장고', '스마트폰', '노트북', '카메라'] },
       { key: 'prefer', label: '어떤 제품을 선호하나요?', options: ['가성비가 좋은', '최근에 출시된', '성능이 가장 좋은'] }
+    ],
+    caution: 'AI는 가격, 판매처 등의 정보를 잘못 알려줄 수도 있어요. 실제로 구매하기 전 다시 확인해요.'
+  },
+  {
+    id: 'buying_guide', category: 'shopping', icon: '🔍', title: '제품 구매 전 확인하기',
+    description: 'AI가 좋은 제품을 추천해줘요.',
+    template: '{product}를 구매하려고 해. 구매하기 전에 꼭 확인해야 할 사항과 주의사항, 유지 비용, 관리 방법을 알려줘.',
+    fields: [
+      { key: 'product', label: '어떤 상품을 구매하나요?', options: ['TV', '냉장고', '스마트폰', '노트북', '카메라'] }
+    ],
+    caution: 'AI는 일반적인 정보만을 알려줘요. 특정 상품을 구매하려고 할 때는 다시 확인해요.'
+  },
+  {
+    id: 'gift_by_occasion', category: 'shopping', icon: '🧺', title: '상황별 선물 고르기',
+    description: 'AI가 상황에 맞는 선물을 추천해줘요.',
+    template: '{occasion}을 맞아 {recipient}에게 선물하고 싶어. {budget} 예산 안에서 부담스럽지 않으면서 실용적이고 센스 있는 선물 5가지를 추천해줘. 각 선물의 장점과 추천 이유도 알려줘.',
+    fields: [
+      { key: 'occasion', label: '어떤 상황인가요?', options: ['설날', '추석', '신년', '크리스마스', '생일'] },
+      { key: 'recipient', label: '누구에게 보내나요?', options: ['친구', '가족', '동아리 회원', '이웃'] },
+      { key: 'budget', label: '예산은 얼마인가요?', options: ['3만 원대', '5만 원대', '10만 원대'] }
     ],
     caution: 'AI는 가격, 판매처 등의 정보를 잘못 알려줄 수도 있어요. 실제로 구매하기 전 다시 확인해요.'
   },
