@@ -92,6 +92,14 @@ window.PROMPT_CARDS = [
     ]
   },
   {
+    id: 'fridge_cook', category: 'cook', icon: '🍗', title: '냉장고 속 재료로 요리하기',
+    description: '냉장고에 있는 재료를 활용해 요리를 추천받아요.',
+    template: '냉장고에 {ingredient}가 있어. 이 재료를 활용해서 만들 수 있는 간단한 요리 3가지를 추천해줘. 추가로 필요한 재료와 만드는 순서를 쉽게 설명해줘.',
+    fields: [
+      { key: 'ingredient', label: '어떤 재료가 있나요?', options: ['김치', '두부', '삼겹살', '당근', '감자'] }
+    ]
+  },
+  {
     id: 'foreign_recipe', category: 'cook', icon: '🍽️', title: '이국적인 음식 레시피 찾기',
     description: '맛있는 외국 음식 요리법을 찾아봐요.',
     template: '한국인 입맛에 잘 맞고 집에서 쉽게 만들 수 있는 {for}용 {country} 음식 5종류의 레시피를 알려줘. 만약 한국에서 구하기 힘든 재료가 있다면 대체할 수 있는 재료도 알려줘.',
@@ -140,6 +148,38 @@ window.PROMPT_CARDS = [
     caution: 'AI는 일반적인 방법을 알려줄 뿐, 실제로 도움을 줄 수는 없어요. 만약 실제로 긴급한 상황이 발생한다면 경찰, 119 등에게 도움을 청하세요.'
   },
   {
+    id: 'home_cleaning', category: 'life', icon: '🧹', title: '집안 청소 및 정리 방법',
+    description: '집을 쉽고 빠르게로 청소하는 방법을 알아봐요.',
+    template: '{place}를 쉽고 빠르게 청소하고 정리하는 팁을 알려줘. 필요한 청소 도구와 순서, 시간 절약 요령도 함께 설명해줘.',
+    fields: [
+      { key: 'place', label: '어떤 장소를 청소하나요?', options: ['안방', '거실', '화장실', '창고', '베란다'] }
+    ]
+  },
+  {
+    id: 'save_money', category: 'life', icon: '💵', title: '생활비 절약 방법 알아보기',
+    description: 'AI와 생활비를 줄일 수 있는 현실적인 방법을 찾아봐요.',
+    template: '한 달 생활비를 절약하고 싶어. {area}에서 지출을 줄일 수 있는 실천 방법 5가지를 알려줘. 당장 시작할 수 있는 쉬운 방법부터 소개해줘.',
+    fields: [
+      { key: 'area', label: '어떤 생활비를 고민하나요?', options: ['외식', '교통', '취미', '휴대폰 요금'] }
+    ]
+  },
+  {
+    id: 'appliance_tips', category: 'life', icon: '🖥️', title: '가전제품 올바르게 사용하기',
+    description: '가전제품을 오래 사용하고 관리하는 방법을 배워봐요.',
+    template: '{appliance}를 올바르게 사용하는 방법과 청소 및 관리 요령을 쉽게 알려줘. 전기요금을 절약하는 방법과 사용 시 주의사항도 설명해줘.',
+    fields: [
+      { key: 'appliance', label: '어떤 가전제품인가요?', options: ['냉장고', '전자레인지', '컴퓨터', '스마트폰', 'TV', '세탁기'] }
+    ]
+  },
+  {
+    id: 'smartphone_help', category: 'life', icon: '📱', title: '스마트폰 기능 쉽게 배우기',
+    description: '평소 어려웠던 스마트폰 기능을 하나씩 배워봐요.',
+    template: '{feature} 방법을 스마트폰 초보자도 따라 할 수 있도록 단계별로 설명해줘. 각 단계에서 어떤 버튼을 눌러야 하는지 쉽게 알려주고, 주의할 점도 설명해줘.',
+    fields: [
+      { key: 'feature', label: '어떤 기능이 궁금한가요?', options: ['사진과 동영상 다운로드', '앱 설치', '유튜브 사용하기', '지도 앱으로 길찾기', 'ChatGPT 사용'] }
+    ]
+  },
+  {
     id: 'exercise', category: 'health', icon: '🌿', title: '집에서 하는 가벼운 운동',
     description: '운동 시간과 종류를 골라보세요.',
     template: '집에서 {minutes} 정도 해볼 수 있는 가벼운 {kind} 운동을 3가지 소개해줘. 방법을 쉽게 설명하고, 무리가 가면 중단해야 한다는 주의사항도 알려줘.',
@@ -150,12 +190,30 @@ window.PROMPT_CARDS = [
     caution: '운동 방법은 일반적인 정보에요. 통증이나 질환이 있다면 전문가에게 확인하세요.'
   },
   {
+    id: 'walking_plan', category: 'health', icon: '🚶‍♂️', title: '걷기 운동 계획 세우기',
+    description: 'AI와 걷기 운동 계획을 세워봐요.',
+    template: '건강을 위해 하루에 {minutes}씩 걷기 운동을 시작하려고 해. 초보자도 무리 없이 따라 할 수 있도록 일주일 운동 계획을 세워줘. 준비 운동과 마무리 운동, 주의사항도 알려줘.',
+    fields: [
+      { key: 'minutes', label: '얼마나 운동할까요?', options: ['10분', '30분', '1시간'] }
+    ],
+    caution: '운동 방법은 일반적인 정보에요. 통증이나 질환이 있다면 전문가에게 확인하세요.'
+  },
+  {
     id: 'well_being', category: 'health', icon: '❤️‍🩹', title: '건강을 위한 생활 습관',
     description: 'AI에게 건강한 생활 습관을 배워봐요.',
     template: '{for} 건강을 유지하는 데 도움이 되는 {behavior}을 5가지 알려줘. 의학적으로 알려진 근거를 바탕으로 설명하고, 일상생활에서 쉽게 실천할 수 있는 방법을 중심으로 소개해줘. 각 방법의 실천 요령과 주의사항도 함께 알려줘. 과학적 근거가 부족한 내용은 그 사실을 명확히 표시해줘.',
     fields: [
       { key: 'for', label: '어떤 것이 궁금한가요?', options: ['관절', '두뇌', '심혈관'] },
-      { key: 'behavior', label: '무엇을 알아볼까요?', options: ['생활 습관', '간단한 운동', '식습관'] }
+      { key: 'behavior', label: '무엇을 알아볼까요?', options: ['생활 습관', '간단한 운동', '꼭 기억해야 할 것'] }
+    ],
+    caution: 'AI는 정확하지 않은 정보를 알려줄 수 있어요. 실제로 건강에 이상이 있다면 의사의 진료를 받으세요.'
+  },
+  {
+    id: 'healthy_meal', category: 'health', icon: '🍎', title: '건강한 식단 구성하기',
+    description: 'AI에게 건강한 식습관을 배워봐요.',
+    template: '{goal}에 도움이 되는 하루 식단을 구성해줘. 아침, 점심, 저녁 메뉴와 간단한 조리법을 알려줘. 영양 균형을 고려하고 구하기 쉬운 재료를 사용해줘.',
+    fields: [
+      { key: 'goal', label: '어떤 건강을 챙기나요?', options: ['심혈관', '소화기관', '기억력'] }
     ],
     caution: 'AI는 정확하지 않은 정보를 알려줄 수 있어요. 실제로 건강에 이상이 있다면 의사의 진료를 받으세요.'
   },
@@ -177,6 +235,22 @@ window.PROMPT_CARDS = [
       { key: 'for', label: '어떤 분야가 궁금한가요?', options: ['눈 건강', '관절 건강', '장 건강', '기억력'] }
     ],
     caution: 'AI의 설명은 정확하지 않거나 빠진 내용이 있을 수 있어요. 영양제는 복용 중인 약과 상호작용할 수 있으므로, 구매하거나 복용하기 전에 의사·약사와 상담하세요.'
+  },
+  {
+    id: 'morning_stretch', category: 'health', icon: '☀️', title: '아침에 하는 간단한 스트레칭',
+    description: '개운한 아침을 위한 스트레칭 방법을 알아봐요.',
+    template: '아침에 일어나서 집에서 할 수 있는 간단한 스트레칭 5가지를 알려줘. 동작별 자세와 방법, 권장 시간을 설명하고 통증이 발생하면 중단하도록 주의사항도 알려줘.',
+    fields: [
+
+    ]
+  },
+  {
+    id: 'sleep_tips', category: 'health', icon: '🌙', title: '숙면을 위한 생활 습관',
+    description: '숙면을 위한 스트레칭 방법을 알아봐요.',
+    template: '아침에 일어나서 집에서 할 수 있는 간단한 스트레칭 5가지를 알려줘. 동작별 자세와 방법, 권장 시간을 설명하고 통증이 발생하면 중단하도록 주의사항도 알려줘.',
+    fields: [
+      
+    ]
   },
   {
     id: 'message', category: 'writing', icon: '💌', title: '따뜻한 문자 쓰기',
