@@ -241,7 +241,6 @@ window.PROMPT_CARDS = [
     description: '개운한 아침을 위한 스트레칭 방법을 알아봐요.',
     template: '아침에 일어나서 집에서 할 수 있는 간단한 스트레칭 5가지를 알려줘. 동작별 자세와 방법, 권장 시간을 설명하고 통증이 발생하면 중단하도록 주의사항도 알려줘.',
     fields: [
-
     ]
   },
   {
@@ -249,7 +248,6 @@ window.PROMPT_CARDS = [
     description: '숙면을 위한 스트레칭 방법을 알아봐요.',
     template: '아침에 일어나서 집에서 할 수 있는 간단한 스트레칭 5가지를 알려줘. 동작별 자세와 방법, 권장 시간을 설명하고 통증이 발생하면 중단하도록 주의사항도 알려줘.',
     fields: [
-      
     ]
   },
   {
@@ -271,12 +269,47 @@ window.PROMPT_CARDS = [
     ]
   },
   {
+    id: 'polite_refusal', category: 'writing', icon: '🫸', title: '정중하게 거절하는 문자 쓰기',
+    description: '상대방이 기분 나쁘지 않은 거절 문자를 써봐요.',
+    template: '{recipient}의 {situation} 부탁을 정중하게 거절하는 문자를 작성해줘. 상대방의 기분이 상하지 않도록 배려하면서도 거절 의사가 분명하게 전달되도록 작성해줘.',
+    fields: [
+      { key: 'recipient', label: '누구에게 보내나요?', options: ['친구', '가족', '동아리 회원', '이웃'] },
+      { key: 'situation', label: '어떤 상황인가요?', options: ['식사 약속', '돈 빌림', '여행 동참'] }
+    ]
+  },
+  {
+    id: 'reconnect_message', category: 'writing', icon: '🖐️', title: '오랜만에 연락하는 문자 쓰기',
+    description: '오랜만에 연락할 때의 반가움을 전해봐요.',
+    template: '오랜만에 연락하는 {recipient}에게 보낼 반가운 문자를 작성해줘. 너무 어색하거나 부담스럽지 않게 자연스럽고 따뜻한 말투로 작성해줘.',
+    fields: [
+      { key: 'recipient', label: '누구에게 보내나요?', options: ['친구', '가족', '동아리 회원', '이웃'] }
+    ]
+  },
+  {
+    id: 'thank_you', category: 'writing', icon: '👍', title: '감사 인사말 작성하기',
+    description: '감사 인사를 멋지게 전해봐요.',
+    template: '{recipient}에게 {reason}에 대한 감사 인사를 전하고 싶어. 진심이 느껴지는 따뜻한 글을 작성해줘. 너무 과장하지 말고 자연스럽게 작성해줘.',
+    fields: [
+      { key: 'recipient', label: '누구에게 보내나요?', options: ['친구', '가족', '동아리 회원', '이웃'] },
+      { key: 'reason', label: '어떤 것이 감사한가요?', options: ['부탁을 받아줌', '선물을 보내줌', '약속을 지켜줌'] }
+    ]
+  },
+  {
     id: 'daytrip', category: 'travel', icon: '🧳', title: '가까운 곳으로 나들이 떠나기',
     description: '출발 지역과 나들이 주제를 선택해 보세요.',
     template: '{city}에서 대중교통으로 갈 수 있는 {theme} 당일치기 여행지 3곳을 추천해줘. 방문 전에 운영시간과 교통편을 확인하는 방법도 알려줘.',
     fields: [
       { key: 'city', label: '어디에서 출발하나요?', options: ['서울', '인천', '수원', '부천', '성남'] },
-      { key: 'theme', label: '어떤 곳이 좋으세요?', options: ['자연 풍경이 좋은', '역사 이야기가 있는', '걷기 좋은'] }
+      { key: 'theme', label: '어떤 곳이 좋은가요?', options: ['자연 풍경이 좋은', '역사 이야기가 있는', '걷기 좋은'] }
+    ],
+    caution: '운영시간, 요금, 교통편은 바뀔 수 있어요. 방문 전에 공식 사이트로 확인해요.'
+  },
+  {
+    id: 'family_trip', category: 'travel', icon: '🚅', title: '가족과 함께하는 여행지 추천',
+    description: 'AI와 가족 여행 계획을 세워봐요.',
+    template: '가족과 함께 {location} 여행을 가려고 해. 걷는 거리가 너무 길지 않고 편하게 즐길 수 있는 관광지 5곳을 추천해줘. 이동 방법과 주변 식당, 예상 비용도 알려줘.',
+    fields: [
+      { key: 'location', label: '어떤 곳이 좋은가요?', options: ['서울', '인천', '수원', '광주', '대전', '대구', '부산', '제주'] }
     ],
     caution: '운영시간, 요금, 교통편은 바뀔 수 있어요. 방문 전에 공식 사이트로 확인해요.'
   },
@@ -290,6 +323,15 @@ window.PROMPT_CARDS = [
       { key: 'city', label: '어디를 여행하나요?', options: ['도쿄', '오사카', '상하이', '베이징', '로스앤젤레스', '뉴욕', '런던', '하노이', '파리', '베를린'] }
     ],
     caution: 'AI는 정확하지 않은 정보를 알려줄 수 있어요. 실제로 여행을 떠나기 전에 직접 다시 확인해요.'
+  },
+  {
+    id: 'photo_spots', category: 'travel', icon: '📷', title: '여행지 사진 명소 찾기',
+    description: '여행지에서 예쁜 사진을 찍어봐요.',
+    template: '{location}에서 사진 찍기 좋은 장소 5곳을 추천해줘. 각 장소의 특징과 사진이 예쁘게 나오는 시간대, 촬영하기 좋은 구도를 알려줘.',
+    fields: [
+      { key: 'location', label: '어디서 사진을 찍나요?', options: ['도쿄', '오사카', '상하이', '베이징', '로스앤젤레스', '뉴욕', '런던', '하노이', '파리', '베를린'] }
+    ],
+    caution: 'AI는 정확하지 않은 정보를 알려줄 수 있어요. 실제로 방문하기 전에 다시 확인해요.'
   },
   {
     id: 'travel_language', category: 'language', icon: '🌎', title: '여행지 필수 회화 검색',
